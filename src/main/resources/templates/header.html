@@ -1,0 +1,73 @@
+
+    <!-- 헤더 시작 -->
+    <header th:fragment="headerFragment1">
+      <div class="logo" id="blink">
+        <a href="index.html"><img  src="img/logo.png" alt="" /></a>
+      </div>
+    </header>
+    <!-- NAV 시작 -->
+    <nav th:fragment="headerFragment2">
+      <div class="nav-menu">
+        <ul>
+          <li><a href="#" >About</a></li>
+          <br>
+          <li><a href="color1.html" >펫스널 컬러</a></li>
+          <li><a href="#" >펫스널 사이즈</a></li>
+        </ul>
+        <ul>
+          <li><a href="#" >Wear</a></li>
+          <br>
+          <li><a href="#" >T-shirts</a></li>
+          <li><a href="hoodies.html" >Hoodies</a></li>
+        </ul>
+        <ul>
+          <li><a href="#" >Harness & Collars</a></li>
+          <br>
+          <li><a href="#" >Harness</a></li>
+          <li><a href="#" >Collars</a></li>
+        </ul>
+        <ul>
+          <li><a href="#" >Contact</a></li>
+          <br>
+          <li><a href="#" >Q&A</a></li>
+          <li><a href="FaQ.html" >자주 묻는 질문</a></li>
+        </ul>
+        <ul></ul>
+        <ul>
+          <li><a href="#" class="cta">My page</a></li>
+          <br>
+          <li><a th:href="@{/login}" >Login</a></li>
+          <li><a href="#" >Cart</a></li>
+        </ul>
+          <a href="#">
+            <i class="fas fa-bars"> </i>
+          </a>
+        </a>
+      </div>
+      <!-- <div class="hamburger-menu">
+        <ul>
+          <li>
+            <a href="#">ABout</a>
+            </li>
+          <li>
+            <a href="#">Wear</a>
+          </li>
+            <li>
+              <a href="#">Harness</a>
+          </li>
+            <li>
+            <a href="#" >Contact</a>
+            </li>
+            <li></li><li></li>
+            <li>
+              <a href="#" class="cta">My page</a>
+            </li>
+          </ul>
+          <a href="#" class="close">
+            <i class="fas fa-time"> </i>
+          </a>
+        </div> -->
+      
+    </nav>
+
+

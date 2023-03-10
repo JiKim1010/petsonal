@@ -1,0 +1,22 @@
+section {
+    /* border: 1px red solid; */
+  
+  }
+  .Outer_box{
+    height: 350px;
+    padding-bottom: 50ox;
+    border: 1px red solid;
+    margin-top: 200px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    text-align: center;
+    background-color: rgba(238, 238, 238, 224);
+    font-family: 'Lato', sans-serif;
+  }
+  .In_box{
+    margin-top: 40px;
+  }
+  input{
+    margin-top: 10px;
+  }

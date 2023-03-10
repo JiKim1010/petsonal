@@ -1,0 +1,197 @@
+
+<!--  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petsonal Shopper</title>
+    
+    <style>
+      .wrap {
+        height: 500px;
+      }
+ 
+      /* #btn1{
+
+        width:20px;
+        height: 6px;
+        padding: 10px;
+        font: size 20px;
+      }
+ 
+      #btn2{
+
+        width:20px;
+        height: 6px;
+        padding: 10px;
+
+      } */
+
+    </style>
+  
+    
+    
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/detail.css" />
+    <script defer src="js/includ.js" type="text/javascript"></script>
+  </head>
+ 
+ 
+  <body>
+    <header><div data-include="header.html"></div></header>
+   -->  
+
+
+
+    <!-- Section 시작 -->
+    
+    
+
+<html layout:decorate="~{layout}">
+    
+    
+    
+    <section  layout:fragment="content" >
+    
+     
+    <style>
+      .wrap {
+        height: 500px;
+      }
+
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/detail.css" />
+    <script defer src="js/includ.js" type="text/javascript"></script>
+    
+    
+    
+      <div class="pic_box">
+        <!-- Primary carousel image -->
+        <div class="show" href="1.jpg">
+          <img src="img/hoodies/g1-1.jpg" id="show-img" />
+        </div>
+
+        <!-- Secondary carousel image thumbnail gallery -->
+        <div class="small-img">
+          <img
+            src="img/hoodies/next-icon.png"
+            class="icon-left"
+            alt=""
+            id="prev-img"
+          />
+          <div class="small-container">
+            <div id="small-img-roll">
+              <img src="img/hoodies/g1-1.jpg" class="show-small-img" alt="" />
+              <img src="img/hoodies/g1-2.jpg" class="show-small-img" alt="" />
+              <img src="img/hoodies/g1-3.jpg" class="show-small-img" alt="" />
+              <img src="img/hoodies/g1.jpg" class="show-small-img" alt="" />
+            </div>
+          </div>
+          <img
+            src="img/hoodies/next-icon.png"
+            class="icon-right"
+            alt=""
+            id="next-img"
+          />
+        </div>
+      </div>
+      <div class="description">
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <h1>테디 독 스트라이프 점퍼 </h1>
+        <br />
+        <table>
+          <tr>
+            <td width="100px">
+              <div id="total_cost">가격 :</div>
+              <div id="price" hidden>27000</div>
+            </td>
+            <td>27,000 원</td>
+          </tr>
+          <tr>
+            <td><label for="size"> size : </label></td>
+            <td>
+              <div id="size_box">
+                <select name="size" id="size">
+                  <option value="XS">============  XS  ===========</option>
+                  <option value="S">============ S ============</option>
+                  <option value="M">============ M ============</option>
+                  <option value="L">============ L ============</option>
+                  <option value="XL">============ XL ============</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> <div class="item_check">수 량 : </td>
+            <td id="result"><span id="c_result">1</span>
+              <input id="btn1" 
+                type="button"
+                onclick='count("plus")'
+                class="plus"
+                value="+"
+              />
+              <input  id="btn2"
+                type="button"
+                onclick='count("minus")'
+                class="minus"
+                value="-"
+              /></td>
+          </tr>
+        </table>
+        <div class="t_amount">총 상품금액 :
+          <span id="total"><b>27,000 </b></span>원
+          <div id="price" hidden><b>27000원</b></div>
+        </div>
+        <div class="order_box">
+          <div class="button">장바구니</div>
+          <div class="button">바로 구매</div>
+        </div>
+      </div>
+
+
+      <div id="clear"></div>
+
+      <div class="expl">
+        <b>Description:</b><br /><br />
+        Mister Woof Harlow Dog Knit Jumper is one of the latest dog knit jumpers
+        from the Mister Woof new line.
+        <br />The latest range of buttery soft knitwear will keep your dog both
+        warm and stylish all winter long.
+        <br />
+        The Harlow Knit features a stunning yellow complimented back with a soft
+        blush pink and navy and white stripe detail creating a timeless outfit,
+        finished off with a chic red stripe along the hemline.
+        <br /><br />
+        <b>Why we love this product:</b>
+        <br />
+        The harness keyhole makes for easy and comfortable walks.<br />
+        Keeps your dog warm and cosy in and out of their home.<br />
+        Reduces dog hair around your home.<br />
+        <br />
+        <b>Material:</b> 100% Acrylic. <br />
+        <br />
+        <b>Care Instructions:</b> Warm hand wash. Line dry.
+      </div>
+    </section>
+
+    <!-- Footer 시작 -->
+    <footer><div data-include="footer.html"></div></footer>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/amount.js" type="text/javascript"></script>
+  <script src="js/detail/zoom-image.js"></script>
+  <script src="js/detail/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/lbs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+  <script src="js/includ.js"></script>
+</html>
