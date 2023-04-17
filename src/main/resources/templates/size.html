@@ -1,0 +1,38 @@
+
+
+<html layout:decorate="~{layout}">
+<section layout:fragment="content" class="main">
+	<link rel="stylesheet" type="text/css" href="css/size.css" />
+	<div class="b1">
+		<img src="img/size.jpg" />
+	</div>
+
+	<div class="b2">
+		<form method="post" th:action="@{/calculate}">
+			<div class="Outer_box">
+				<div class="In_box">
+					<br> <br> 강아지의 <b>등길이</b>를 입력해주세요 <br> <input
+						name="lengthSize" type="number">&nbsp; cm
+				</div>
+				</p>
+				<div class="In_box">
+					<label>강아지의 <b>가슴둘레</b>를 입력해주세요
+					</label><br> <input name="roundSize" type="number">&nbsp; cm
+				</div>
+				</p>
+				<div class="In_box">
+					<label>강아지의 <b>몸무게</b>를 입력해주세요
+					</label><br> <input name="weight" type="number">&nbsp; kg
+				</div>
+				</p>
+				</p>
+				<div class="In_box">
+					<button id="btn">
+						<b>사이즈 체크</b>
+					</button>
+				</div>
+		</form>
+	</div>
+
+</section>
+</html>

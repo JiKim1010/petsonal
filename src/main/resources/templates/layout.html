@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+<link href="https://fonts.googleapis.com/css?family=Lato"
+	rel="stylesheet" />
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- sbb CSS -->
+ <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+
+<title>Petsonal Shopper</title>
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<script defer src="/js/includ.js" type="text/javascript"></script>
+
+
+
+
+
+</head>
+<body>
+<head th:replace="~{header::headerFragment1}"></head>
+<nav th:replace="~{header::headerFragment2}"></nav>
+
+
+<th:block layout:fragment="content"></th:block>
+
+
+<!-- Bootstrap  CSS -->
+ <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+<footer th:replace="~{footer::footerFragment}"></footer>
+
+
+
+</body>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/main.js" charset="utf-8"></script>
+
+<script layout:fragment="script" type='text/javascript'>
+const delete_elements = document.getElementsByClassName("delete");
+Array.from(delete_elements).forEach(function(element) {
+ element.addEventListener('click', function() {
+ if(confirm("정말로 삭제하시겠습니까?")) {
+ location.href = this.dataset.uri;
+ };
+ });
+});
+</script>
+
+
+
+
+
+
+</html>
+
+

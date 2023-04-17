@@ -1,0 +1,53 @@
+
+
+<html layout:decorate="~{layout}">
+    <head>
+    <style>
+      section {
+        margin-top: 150px;
+      }
+      img {
+        width: 350px;
+        margin: 25px;
+      }
+      img:hover {
+        opacity: 0.7;
+      }
+      h1 {
+        text-align: center;
+        font-size: xx-large;
+        margin-bottom: 50px;
+      }
+
+
+
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script defer src="js/includ.js" type="text/javascript"></script>
+  </head>
+
+
+    <section layout:fragment="content" class="main" style="margin-top: 200px;
+        margin-left: 15%;
+        background-color: white;">
+      <h1>Hoodies</h1>
+      <div class="photo_box">
+        <div>
+          <a  th:href="@{/pro_detail}" ><img src="img/hoodies/g1.jpg" /></a>
+          <a href="#"><img src="img/hoodies/a1.jpg" /></a>
+          <a href="#"><img src="img/hoodies/b1.jpg" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="img/hoodies/c1.jpg" /></a>
+          <a href="#"><img src="img/hoodies/d1.jpg" /></a>
+          <a href="#"><img src="img/hoodies/e1.jpg" /></a>
+        </div>
+      </div>
+    </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+  <script src="js/includ.js"></script>
+
+</html>
+

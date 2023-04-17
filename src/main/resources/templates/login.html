@@ -1,0 +1,22 @@
+<html layout:decorate="~{layout}">
+<head>
+<link rel="stylesheet" type="text/css" href="/CSS/login.css">
+</head>
+<main layout:fragment="content">
+	
+	<form th:action="@{/user/login}" method ="post">
+		
+    <div id="login_form" style="width:fit-content; margin:0 auto;">
+        <input type="text" name="username" id="username" placeholder="ID"><br>
+        <input type="password" name="password" id="password" placeholder="Password"><br>
+		<p style="color:red;" th:if="${param.error}"> 사용자 ID 또는 비밀번호를 확인해 주세요</p>	
+        <button id="btn_login">Login</button>
+        
+        <div class="find">
+	        <p><a href="#">Find ID</a></p>
+	        <p><a href="#">Find Password</a></p>
+        </div>
+        <button id="btn_register"><a th:href="@{/signup}">Register</a></button>
+    </div>
+    </form>
+</html>

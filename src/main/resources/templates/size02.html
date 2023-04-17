@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>사이즈 계산기</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn-calculate").click(function(){
+				var height = parseInt($("#height").val());
+				var chest = parseInt($("#chest").val());
+				var weight = parseInt($("#weight").val());
+				var size;
+				
+				if (height < 25 || chest < 38 || weight <= 4) {
+					size = "S";
+				} else if (height < 30 || chest < 38 || weight < 7) {
+					size = "M";
+				} else {
+					size = "XL";
+				}
+				
+				$("#result").text("당신의 사이즈는 " + size + "입니다.");
+			});
+		});
+	</script>
+</head>
+<body>
+	<label for="height">키(cm):</label>
+	<input type="number" id="height" name="height"><br>
+	<label for="chest">가슴 둘레(cm):</label>
+	<input type="number" id="chest" name="chest"><br>
+	<label for="weight">몸무게(kg):</label>
+	<input type="number" id="weight" name="weight"><br>
+	<button type="button" id="btn-calculate">확인</button>
+	<div id="result"></div>
+</body>
+</html>
+
+
+</html>

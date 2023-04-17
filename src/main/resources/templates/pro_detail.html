@@ -1,0 +1,313 @@
+<html layout:decorate="~{layout}">
+
+
+<section layout:fragment="content">
+
+	<style>
+.wrap {
+	height: 500px;
+}
+	.sizeBox{
+	width: 550px;
+    border: 2px  #efefef solid;
+    padding: 30px;
+    float:right;
+    margin-top: -160px;
+
+	}
+	.sizeBox table{
+	 margin-left:70px;
+	}
+	.sizeBox label{
+	padding: 2px;
+	}
+</style>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/detail.css" />
+	<script defer src="js/includ.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn-calculate").click(function() {
+			var height = parseInt($("#height").val());
+			var chest = parseInt($("#chest").val());
+			var weight = parseInt($("#weight").val());
+			var size;
+
+			if (height < 25 || chest < 38 || weight <= 4) {
+				size = "S";
+			} else if (height < 30 || chest < 43 || weight < 7) {
+				size = "M";
+			} else if (height < 34 || chest < 49 || weight < 12) {
+				size = "L";
+			} else if (height > 35 || chest > 49 || weight > 12) {
+
+				result = "XL";
+			}
+
+			$("#result").text("추천 사이즈는 " + size + "입니다.");
+		});
+	});
+</script>
+
+
+	<div class="pic_box">
+	
+		<div class="show" href="1.jpg">
+			<img src="img/hoodies/g1-1.jpg" id="show-img" />
+		</div>
+
+	
+		<div class="small-img">
+			<img src="img/hoodies/next-icon.png" class="icon-left" alt=""
+				id="prev-img" />
+			<div class="small-container">
+				<div id="small-img-roll">
+					<img src="img/hoodies/g1-1.jpg" class="show-small-img" alt="" /> <img
+						src="img/hoodies/g1-2.jpg" class="show-small-img" alt="" /> <img
+						src="img/hoodies/g1-3.jpg" class="show-small-img" alt="" /> <img
+						src="img/hoodies/g1.jpg" class="show-small-img" alt="" />
+				</div>
+			</div>
+			<img src="img/hoodies/next-icon.png" class="icon-right" alt=""
+				id="next-img" />
+		</div>
+	</div>
+	<div class="description">
+		<h1>테디 독 스트라이프 점퍼</h1>
+		<br />
+		<table  id="table2">
+			<tr>
+				<td width="100px">
+					<div id="total_cost">가격 :</div>
+					<div id="price" hidden>27000</div>
+				</td>
+				<td>27,000 원</td>
+			</tr>
+			<tr>
+				<td><label for="size"> size : </label></td>
+				<td>
+					<div id="size_box">
+						<select name="size" id="size">
+							<option value="XS">============ XS ===========</option>
+							<option value="S">============ S ============</option>
+							<option value="M">============ M ============</option>
+							<option value="L">============ L ============</option>
+							<option value="XL">============ XL ============</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="item_check">수 량 :
+				</td>
+				<td id="result1"><span id="c_result">1</span> <input id="btn1"
+					type="button" onclick='count("plus")' class="plus" value="+" /> <input
+					id="btn2" type="button" onclick='count("minus")' class="minus"
+					value="-" /></td>
+			</tr>
+		</table>
+		<div class="t_amount">
+			총 상품금액 : <span id="total"><b>27,000 </b></span>원
+			<div id="price" hidden>
+				<b>27000원</b>
+			</div>
+		</div>
+		<div class="order_box">
+			<div class="button">장바구니</div>
+			<div class="button">바로 구매</div>
+		</div>
+	</div>
+
+
+	<div id="clear"></div>
+	
+	<div class="sizeBox">
+		<table>
+		
+			<tr>
+				<td colspan="2">추천 사이즈를 확인하세요</td>
+			</tr>
+			<tr>
+				<td><label for="height"> 등길이(cm):</label></td>
+				<td><input type="number" id="height" name="height"></td>
+			</tr>
+			<tr>
+				<td><label for="chest">가슴 둘레(cm):</label></td>
+				<td><input type="number" id="chest" name="chest"></td>
+			</tr>
+			<tr>
+				<td><label for="weight">몸무게(kg):</label></td>
+				<td><input type="number" id="weight" name="weight"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button type="button" id="btn-calculate">사이즈 확인</button></td>
+			</tr>
+		</table>
+		<br>
+		<div id="result"></div>
+	</div>
+<div id="clear"></div>
+<br><br><br>
+	<div class="expl">
+		<b>Description:</b><br /> <br /> Mister Woof Harlow Dog Knit Jumper
+		is one of the latest dog knit jumpers from the Mister Woof new line. <br />The
+		latest range of buttery soft knitwear will keep your dog both warm and
+		stylish all winter long. <br /> The Harlow Knit features a stunning
+		yellow complimented back with a soft blush pink and navy and white
+		stripe detail creating a timeless outfit, finished off with a chic red
+		stripe along the hemline. <br /> <br /> <b>Why we love this
+			product:</b> <br /> The harness keyhole makes for easy and comfortable
+		walks.<br /> Keeps your dog warm and cosy in and out of their home.<br />
+		Reduces dog hair around your home.<br /> <br /> <b>Material:</b>
+		100% Acrylic. <br /> <br /> <b>Care Instructions:</b> Warm hand
+		wash. Line dry.
+	</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+	crossorigin="anonymous"></script>
+<script src="js/amount.js" type="text/javascript"></script>
+<script src="js/detail/zoom-image.js"></script>
+<script src="js/detail/main.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/lbs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js" charset="utf-8"></script>
+<script src="js/includ.js"></script>
+
+</section>
+
+</html>
+
+
+
+
+<!-- 
+<html layout:decorate="~{layout}">
+
+
+<section layout:fragment="content">
+
+	<style>
+.wrap {
+	height: 500px;
+}
+</style>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/detail.css" />
+	<script defer src="js/includ.js" type="text/javascript"></script>
+
+
+
+	<div class="pic_box">
+	
+		<div class="show" href="1.jpg">
+			<img src="img/hoodies/g1-1.jpg" id="show-img" />
+		</div>
+
+	
+		<div class="small-img">
+			<img src="img/hoodies/next-icon.png" class="icon-left" alt=""
+				id="prev-img" />
+			<div class="small-container">
+				<div id="small-img-roll">
+					<img src="img/hoodies/g1-1.jpg" class="show-small-img" alt="" /> <img
+						src="img/hoodies/g1-2.jpg" class="show-small-img" alt="" /> <img
+						src="img/hoodies/g1-3.jpg" class="show-small-img" alt="" /> <img
+						src="img/hoodies/g1.jpg" class="show-small-img" alt="" />
+				</div>
+			</div>
+			<img src="img/hoodies/next-icon.png" class="icon-right" alt=""
+				id="next-img" />
+		</div>
+	</div>
+	<div class="description">
+		<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+		<h1>테디 독 스트라이프 점퍼</h1>
+		<br />
+		<table  id="table2">
+			<tr>
+				<td width="100px">
+					<div id="total_cost">가격 :</div>
+					<div id="price" hidden>27000</div>
+				</td>
+				<td>27,000 원</td>
+			</tr>
+			<tr>
+				<td><label for="size"> size : </label></td>
+				<td>
+					<div id="size_box">
+						<select name="size" id="size">
+							<option value="XS">============ XS ===========</option>
+							<option value="S">============ S ============</option>
+							<option value="M">============ M ============</option>
+							<option value="L">============ L ============</option>
+							<option value="XL">============ XL ============</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="item_check">수 량 :
+				</td>
+				<td id="result"><span id="c_result">1</span> <input id="btn1"
+					type="button" onclick='count("plus")' class="plus" value="+" /> <input
+					id="btn2" type="button" onclick='count("minus")' class="minus"
+					value="-" /></td>
+			</tr>
+		</table>
+		<div class="t_amount">
+			총 상품금액 : <span id="total"><b>27,000 </b></span>원
+			<div id="price" hidden>
+				<b>27000원</b>
+			</div>
+		</div>
+		<div class="order_box">
+			<div class="button">장바구니</div>
+			<div class="button">바로 구매</div>
+		</div>
+	</div>
+
+
+	<div id="clear"></div>
+
+	<div class="expl">
+		<b>Description:</b><br /> <br /> Mister Woof Harlow Dog Knit Jumper
+		is one of the latest dog knit jumpers from the Mister Woof new line. <br />The
+		latest range of buttery soft knitwear will keep your dog both warm and
+		stylish all winter long. <br /> The Harlow Knit features a stunning
+		yellow complimented back with a soft blush pink and navy and white
+		stripe detail creating a timeless outfit, finished off with a chic red
+		stripe along the hemline. <br /> <br /> <b>Why we love this
+			product:</b> <br /> The harness keyhole makes for easy and comfortable
+		walks.<br /> Keeps your dog warm and cosy in and out of their home.<br />
+		Reduces dog hair around your home.<br /> <br /> <b>Material:</b>
+		100% Acrylic. <br /> <br /> <b>Care Instructions:</b> Warm hand
+		wash. Line dry.
+	</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+	crossorigin="anonymous"></script>
+<script src="js/amount.js" type="text/javascript"></script>
+<script src="js/detail/zoom-image.js"></script>
+<script src="js/detail/main.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/lbs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js" charset="utf-8"></script>
+<script src="js/includ.js"></script>
+
+</section>
+
+</html>
+
+-->

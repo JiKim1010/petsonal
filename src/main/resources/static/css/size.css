@@ -1,0 +1,43 @@
+section {
+	
+	margin-left: 300px;
+}
+
+.Outer_box {
+	width: 400px;
+	height: 350px;
+	padding-top: 50ox;
+	margin-top: 100px;
+	margin-left: 33%;
+	text-align: center;
+	color:grey;
+	font-family: '맑은 고딕';
+	font-size: 12px;
+}
+
+.In_box {
+	margin-top: 40px;
+}
+
+.b1 {
+	float: left;
+}
+
+input {
+	margin-top: 10px;
+}
+
+#btn {
+	width: 200px;
+	border: 1px solid rgba(255, 255, 255, 0.13);
+	background-color: lightgrey;
+	padding: 10px 0px;
+	cursor: pointer;
+	margin: 10px 0px;
+	color: grey;
+}
+
+#btn:hover {
+	background-color: white;
+	color: grey;
+}
